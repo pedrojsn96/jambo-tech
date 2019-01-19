@@ -12,16 +12,16 @@ default: &default
 
 development:
   <<: *default
-  database: code_a_city_development
+  database: jambo_development
   
 test:
   <<: *default
-  database: code_a_city_test
+  database: jambo_test
 
 production:
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: hackthon_code_a_city_production
-  username: hackthon-code-a-city
+  database: jambo_production
+  username: jambo-tech
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
